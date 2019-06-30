@@ -6,9 +6,11 @@ public class Book implements Serializable {
 
     static final long serialVersionUID = 1L;
     private long id;
+    private String isbn;
     private String title;
     private Category category;
     private String author;
+    private BigDecimal price;
 
     public Book() {
     }
@@ -29,6 +31,14 @@ public class Book implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getTitle() {
@@ -53,5 +63,13 @@ public class Book implements Serializable {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }
